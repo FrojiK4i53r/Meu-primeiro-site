@@ -5,7 +5,7 @@ let startTime = 0;
 let attempts = 0;
 let bestTime = null;
 
-// Gerar posição aleatória
+
 function randomPosition() {
     const areaRect = gameArea.getBoundingClientRect();
     const size = 60;
@@ -17,7 +17,7 @@ function randomPosition() {
     target.style.top = `${y}px`;
 }
 
-// Iniciar rodada
+
 function showTarget() {
     setTimeout(() => {
         randomPosition();
@@ -42,7 +42,7 @@ target.addEventListener("click", () => {
     showTarget();
 });
 
-// Botão reiniciar
+
 document.getElementById("start-btn").addEventListener("click", () => {
     attempts = 0;
     bestTime = null;
@@ -55,5 +55,5 @@ document.getElementById("start-btn").addEventListener("click", () => {
     showTarget();
 });
 
-// Começar o jogo automaticamente
 showTarget();
+

@@ -3,16 +3,11 @@ const gamesDiv = document.getElementById("games");
 
 let games = JSON.parse(localStorage.getItem("games")) || [];
 
-/* --------------------------
-   SALVAR NO LOCAL STORAGE
------------------------------*/
+
 function salvar() {
     localStorage.setItem("games", JSON.stringify(games));
 }
 
-/* --------------------------
-   RENDERIZAR JOGOS
------------------------------*/
 function render() {
     gamesDiv.innerHTML = "";
 
@@ -30,7 +25,7 @@ function render() {
             <button class="delete-btn">Deletar</button>
         `;
 
-        /* --------- DOWNLOAD DA CAPA --------- */
+        
         card.querySelector(".download").addEventListener("click", () => {
             const link = document.createElement("a");
             link.href = game.capa;
@@ -38,7 +33,7 @@ function render() {
             link.click();
         });
 
-        /* --------- DELETAR --------- */
+        
         card.querySelector(".delete-btn").addEventListener("click", () => {
             if (confirm("Tem certeza que deseja excluir este jogo?")) {
                 games.splice(index, 1);
@@ -53,9 +48,7 @@ function render() {
 
 render();
 
-/* --------------------------
-   ADICIONAR NOVO JOGO
------------------------------*/
+
 form.addEventListener("submit", e => {
     e.preventDefault();
 
@@ -72,14 +65,14 @@ form.addEventListener("submit", e => {
 
     let capa = "";
 
-    /* ---- usar URL ---- */
+    
     if (imagemURL.trim() !== "") {
         capa = imagemURL.trim();
         adicionar();
         return;
     }
 
-    /* ---- usar upload ---- */
+    
     const file = document.getElementById("imagem").files[0];
     if (!file) {
         alert("Escolha uma imagem ou informe uma URL!");
@@ -93,7 +86,7 @@ form.addEventListener("submit", e => {
     };
     reader.readAsDataURL(file);
 
-    /* ---- adicionar jogo ---- */
+   
     function adicionar() {
         games.push({
             nome,
@@ -108,3 +101,4 @@ form.addEventListener("submit", e => {
         form.reset();
     }
 });
+

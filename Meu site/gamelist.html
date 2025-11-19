@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameList</title>
+    <link rel="stylesheet" href="gamelist.css">
+</head>
+<body>
+
+    <h1>Lista de jogos</h1>
+
+    <form id="form-jogo">
+
+        <label>Capa do jogo (upload ou URL):</label>
+        <input type="file" id="imagem" accept="image/*">
+        <input type="text" id="imagem-url" placeholder="URL da capa (opcional)">
+
+        <label>Nome do jogo:</label>
+        <input type="text" id="nome" required>
+
+        <label>Gênero:</label>
+        <select id="genero" required>
+            <option value="">Selecione</option>
+            <option>Ação</option>
+            <option>RPG</option>
+            <option>FPS</option>
+            <option>Esporte</option>
+            <option>Plataforma</option>
+            <option>Horror</option>
+            <option>Aventura</option>
+            <option>Corrida</option>
+            <option>Puzzle</option>
+        </select>
+
+        <label>Categoria:</label>
+        <select id="categoria" required>
+            <option value="">Selecione</option>
+            <option>Singleplayer</option>
+            <option>Multiplayer</option>
+            <option>Coop</option>
+            <option>Online</option>
+        </select>
+
+        <label>Plataformas (escolha múltipla):</label>
+        <div class="checkbox">
+            <input type="checkbox" value="PC"> PC
+            <input type="checkbox" value="PS4"> PS4
+            <input type="checkbox" value="PS5"> PS5
+            <input type="checkbox" value="Xbox"> Xbox
+            <input type="checkbox" value="Switch"> Switch
+            <input type="checkbox" value="Mobile"> Mobile
+        </div>
+        <br>
+
+        <button type="submit">Adicionar jogo</button>
+    </form>
+
+    <!-- LISTA DE JOGOS -->
+    <div id="games" class="grid"></div>
+
+    <script src="gamelist.js"></script>
+</body>
+</html>

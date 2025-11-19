@@ -1,0 +1,61 @@
+body {
+    background: url("https://cdn2.steamgriddb.com/hero_thumb/3644a684f98ea8fe223c713b77189a77.jpg");
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+#game-area {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 600px;
+    height: 350px;
+    background: #222;
+    border: 3px solid #444;
+    border-radius: 10px;
+    position: relative;
+}
+a {
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#target {
+    width: 60px;
+    height: 60px;
+    background: rgb(0, 255, 115);
+    border-radius: 8px;
+    position: absolute;
+    cursor: pointer;
+    display: none;
+    transition: transform 0.1s;
+}
+
+#target:hover {
+    transform: scale(1.1);
+}
+
+#stats {
+    margin-top: 20px;
+}
+
+#start-btn, .back {
+    background: #444;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+#start-btn:hover, .back:hover {
+    background: #666;
+}

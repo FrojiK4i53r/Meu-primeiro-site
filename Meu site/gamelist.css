@@ -1,0 +1,108 @@
+body {
+    background: #111;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+}
+
+form {
+    background: #1b1b1b;
+    padding: 22px;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+input, select, button {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    transform: 0,3s;
+}
+
+button {
+    background: #6200ff;
+    color: white;
+    cursor: pointer;
+    scale: 1.0;
+    transform: 0.3s;
+    transition: 0.3s;
+    
+}
+button:hover{
+    scale: 1.06;
+    transform: 0.3s;
+}
+
+.checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* ------- GRID PEQUENA ------- */
+.grid {
+    display: grid;
+    gap: 12px;
+    margin-top: 30px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* ------- CARD ------- */
+.card {
+    background: #1a1a1a;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 130px;
+    object-fit: contain;
+    background: #000;
+    border-radius: 5px;
+}
+
+/* botão baixar */
+.download {
+    margin-top: 7px;
+    padding: 6px 10px;
+    font-size: 13px;
+    background: #333;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+}
+
+/* botão deletar */
+.delete-btn {
+    margin-top: 7px;
+    padding: 6px 10px;
+    font-size: 13px;
+    background: #a00000;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #d00000;
+}
+
+/* ------- RESPONSIVO ------- */
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

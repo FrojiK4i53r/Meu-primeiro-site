@@ -1,0 +1,188 @@
+/* Reset */
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Links*/
+a {
+    text-decoration: none;
+}
+
+/*Logo*/
+#Logo {
+    transform: scale(1.0);
+    transition: 0.3s;
+}
+
+#Logo:hover {
+    transform: scale(1.1);
+}
+
+/*Perfil*/
+
+#imagem-avatar {
+    border-radius: 50%;
+    transform: scale(1.0);
+    transition: 0.3s;
+}
+
+#imagem-avatar:hover {
+    transform: scale(1.08);
+}
+
+/*acima disso apenas da foto e mensagem*/
+
+body{
+    text-align: center;
+    background-image:url("https://cdn2.steamgriddb.com/hero_thumb/0b5cd2d55564878de0136deecc9abcee.jpg");
+}
+
+#Sobremim{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 5px hidden;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 40px 20%;
+    margin-bottom: -19px;
+}
+
+#borda_info{
+    /*abaixo a escrita*/
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(255, 255, 255);
+    /*borda das informaçoes e a margem interna*/
+    background-color: rgb(57, 57, 57);
+    border: 5px solid black;
+    border-radius: 30px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 2%;
+    margin-top: 1%;
+    padding: 10px 10px;
+    /*box*/
+    box-sizing: border-box;
+    box-shadow: inset;   
+}
+
+/*estilização botões*/
+
+.social-buttons{
+    margin-top: 20px;
+
+}
+
+.social-buttons a{
+    display: inline-block;
+    margin: 5px 0px;
+    padding: 15px 20px;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    scale: 1.0;
+    transition: 0.3s;
+}
+
+.social-buttons a:hover{
+    transition: 0.3s;
+    opacity: 0.8;
+    scale: 1.1;
+}
+
+.btn--github{
+    background-color: black;
+    height: 50px;
+    width: 120px;
+}
+
+.btn--twitch{
+    background-color: #6441a5;
+    height: 50px;
+    width: 120px;
+}
+
+.btn--youtube{
+    background-color: #ff0000;
+    height: 50px;
+    width: 120px;
+}
+
+.btn--discord{
+    background-color: #5865F2;
+    height: 50px;
+    width: 120px;
+}
+
+/*parte do body*/
+
+#linhaContent{
+    border: 5px solid black;
+    border-radius: 20px;
+    margin: 1% 31% 0%;
+    padding: 10px 10px 10px 0px;
+/*background e conteudo*/
+    background-color: rgb(57, 57, 57);
+    box-sizing: border-box;
+}
+
+#Conteudo1 {
+    width: 100%;
+}
+
+#video1 {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; /* mantém proporção */
+    border-radius: 10px;
+    margin: 1%;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 botões por linha */
+    gap: 15px; /* espaçamento */
+    width: 100%;
+    padding: 10px;
+    justify-items: center;
+}
+
+#content a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;             /* ocupa a célula inteira */
+    max-width: 180px;        /* limite para não ficar gigante */
+    padding: 12px 16px;
+
+    background: white;
+    color: black;
+    border-radius: 10px;
+    font-family: 'Gill Sans', Calibri, sans-serif;
+    text-align: center;
+    font-size: clamp(14px, 2vw, 18px);
+
+    transition: 0.3s;
+}
+
+#content a:hover {
+    opacity: 0.85;
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 600px) {
+    #linhaContent {
+        grid-template-columns: 1fr; /* vídeo em cima, botões embaixo */
+    }
+    #content {
+        grid-template-columns: 1fr; /* vira 1 coluna */
+    }
+
+    #content a {
+        max-width: 100%;
+        width: 90%;
+    }
+}
+/*fim do body*/
